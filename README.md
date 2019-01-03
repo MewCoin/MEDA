@@ -14,6 +14,7 @@ Features:
 
 
 
+
 Seed Nodes Are:
-3.1.10.233
-3.0.0.149
+3.1.10.233::Some Port
+3.0.0.149::Some Port
