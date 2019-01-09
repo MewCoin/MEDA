@@ -104,8 +104,8 @@ const uint64_t MAXIMUM_MIXIN_V1                              = 3;
 const uint64_t MINIMUM_MIXIN_V2                              = 3;
 const uint64_t MAXIMUM_MIXIN_V2                              = 3;
 
-const uint64_t MINIMUM_MIXIN_V3                              = 0;
-const uint64_t MAXIMUM_MIXIN_V3                              = 1;
+const uint64_t MINIMUM_MIXIN_V3                              = 3;
+const uint64_t MAXIMUM_MIXIN_V3                              = 3;
 
 /* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 0;
@@ -162,7 +162,9 @@ const uint32_t UPGRADE_HEIGHT_V2                             = 1;
 const uint32_t UPGRADE_HEIGHT_V3                             = 2;
 
 const uint32_t UPGRADE_HEIGHT_V4                             = 3; // Upgrade height for CN-Lite Variant 1 switch.
-const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V4;
+const uint32_t UPGRADE_HEIGHT_V5                             = 4;
+
+const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V5;
 
 
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
