@@ -37,7 +37,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(65000000000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(6500000000000000);
 
 //Mine using ZAWY starts at block 0
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
