@@ -170,8 +170,15 @@ bool Currency::getBlockReward(uint8_t blockMajorVersion, size_t medianSize, size
   uint64_t fee, uint64_t& reward, int64_t& emissionChange) const {
   assert(alreadyGeneratedCoins <= m_moneySupply);
   assert(m_emissionSpeedFactor > 0 && m_emissionSpeedFactor <= 8 * sizeof(uint64_t));
+  assert(m_emissionSpeedFactor2 > 0 && m_emissionSpeedFactor2 <= 8 * sizeof(uint64_t));
 
-  uint64_t baseReward = (m_moneySupply - alreadyGeneratedCoins) >> m_emissionSpeedFactor;
+  uint64_t newSpeedFactor = m_emissionSpeedFactor;
+
+  if(currentBlockSize >= m_changeSpeedFactor) {
+    newSpeedFactor = m_emissionSpeedFactor2;
+  }
+
+  uint64_t baseReward = (m_moneySupply - alreadyGeneratedCoins) >> newSpeedFactor;
   if (alreadyGeneratedCoins == 0 && m_genesisBlockReward != 0) {
     baseReward = m_genesisBlockReward;
   }
@@ -664,6 +671,8 @@ m_timestampCheckWindow(currency.m_timestampCheckWindow),
 m_blockFutureTimeLimit(currency.m_blockFutureTimeLimit),
 m_moneySupply(currency.m_moneySupply),
 m_emissionSpeedFactor(currency.m_emissionSpeedFactor),
+m_emissionSpeedFactor2(currency.m_emissionSpeedFactor2),
+m_changeSpeedFactor(currency.m_changeSpeedFactor),
 m_rewardBlocksWindow(currency.m_rewardBlocksWindow),
 m_blockGrantedFullRewardZone(currency.m_blockGrantedFullRewardZone),
 m_isBlockexplorer(currency.m_isBlockexplorer),
@@ -718,6 +727,8 @@ CurrencyBuilder::CurrencyBuilder(std::shared_ptr<Logging::ILogger> log) : m_curr
 
   moneySupply(parameters::MONEY_SUPPLY);
   emissionSpeedFactor(parameters::EMISSION_SPEED_FACTOR);
+  emissionSpeedFactor2(parameters::EMISSION_SPEED_FACTOR2);
+  changeSpeedFactor(parameters::CHANGE_SPEED_FACTOR);
 genesisBlockReward(parameters::GENESIS_BLOCK_REWARD);
 
   rewardBlocksWindow(parameters::CRYPTONOTE_REWARD_BLOCKS_WINDOW);
@@ -816,6 +827,19 @@ CurrencyBuilder& CurrencyBuilder::emissionSpeedFactor(unsigned int val) {
   }
 
   m_currency.m_emissionSpeedFactor = val;
+  return *this;
+}
+CurrencyBuilder& CurrencyBuilder::emissionSpeedFactor2(unsigned int val) {
+  if (val <= 0 || val > 8 * sizeof(uint64_t)) {
+    throw std::invalid_argument("val at emissionSpeedFactor2()");
+  }
+
+  m_currency.m_emissionSpeedFactor2 = val;
+  return *this;
+}
+CurrencyBuilder& CurrencyBuilder::changeSpeedFactor(unsigned int val) {
+
+  m_currency.m_changeSpeedFactor = val;
   return *this;
 }
 

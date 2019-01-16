@@ -58,6 +58,8 @@ public:
 
   uint64_t moneySupply() const { return m_moneySupply; }
   unsigned int emissionSpeedFactor() const { return m_emissionSpeedFactor; }
+  unsigned int emissionSpeedFactor2() const { return m_emissionSpeedFactor2; }
+  unsigned int changeSpeedFactor() const { return m_changeSpeedFactor; }
   uint64_t genesisBlockReward() const { return m_genesisBlockReward; }
 
   size_t rewardBlocksWindow() const { return m_rewardBlocksWindow; }
@@ -187,6 +189,8 @@ private:
 
   uint64_t m_moneySupply;
   unsigned int m_emissionSpeedFactor;
+  unsigned int m_emissionSpeedFactor2;
+  unsigned int m_changeSpeedFactor;
   uint64_t m_genesisBlockReward;
 
   size_t m_rewardBlocksWindow;
@@ -272,6 +276,8 @@ public:
 
   CurrencyBuilder& moneySupply(uint64_t val) { m_currency.m_moneySupply = val; return *this; }
   CurrencyBuilder& emissionSpeedFactor(unsigned int val);
+  CurrencyBuilder& emissionSpeedFactor2(unsigned int val);
+  CurrencyBuilder& changeSpeedFactor(unsigned int val);
   CurrencyBuilder& genesisBlockReward(uint64_t val) { m_currency.m_genesisBlockReward = val; return *this; }
 
   CurrencyBuilder& rewardBlocksWindow(size_t val) { m_currency.m_rewardBlocksWindow = val; return *this; }

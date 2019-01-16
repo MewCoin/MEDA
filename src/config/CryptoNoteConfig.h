@@ -50,7 +50,10 @@ const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 2;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 3;
 const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 1200000;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 9;
+const unsigned EMISSION_SPEED_FACTOR                          = 9;
+
+const unsigned CHANGE_SPEED_FACTOR                            =2000;
+const unsigned EMISSION_SPEED_FACTOR2                         = 21;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
