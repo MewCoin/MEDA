@@ -174,9 +174,10 @@ bool Currency::getBlockReward(uint8_t blockMajorVersion, size_t medianSize, size
 
   uint64_t newSpeedFactor = m_emissionSpeedFactor;
 
-  if(currentBlockSize >= m_changeSpeedFactor) {
-    newSpeedFactor = m_emissionSpeedFactor2;
-  }
+  //include code below if you want to change speed factor at certain blocks
+  // if(currentBlockSize >= m_changeSpeedFactor) {
+  //   newSpeedFactor = m_emissionSpeedFactor2;
+  // }
 
   uint64_t baseReward = (m_moneySupply - alreadyGeneratedCoins) >> newSpeedFactor;
   if (alreadyGeneratedCoins == 0 && m_genesisBlockReward != 0) {
