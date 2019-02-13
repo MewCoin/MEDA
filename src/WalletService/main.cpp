@@ -28,7 +28,7 @@
 #include <errno.h>
 #endif
 
-#define SERVICE_NAME "Turtle-Service"
+#define SERVICE_NAME "Obscure-Service"
 
 PaymentGateService* ppg;
 
