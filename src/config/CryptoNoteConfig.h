@@ -72,7 +72,7 @@ const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(65000000
 --print-genesis-tx --genesis-block-reward-address <premine wallet address>
 
 For example:
-TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
+./Obscured --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
 
 * Take the hash printed, and replace it with the hash below in GENESIS_COINBASE_TX_HEX
 
@@ -81,7 +81,7 @@ TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BP
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "012801ff000180c0ead8bee59301023588d120b423727c99139de4545052b68820640bf9141e7e65da4d4d86a9fa632101046edf6f6daf543b9fcd4eab8486d73294662d64cb5080044e339cc79b6fa31f";
+const char GENESIS_COINBASE_TX_HEX[] = "012801ff000180c0ead8bee5930102ec8ed12593caa70f676f86c0e8536a95d4cb4b16b9e90df089ff0f799e7699ad210147db79274e2bde2954d7f7943b7e08cbaaaa0877c94b35337af43154e4043e96";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
