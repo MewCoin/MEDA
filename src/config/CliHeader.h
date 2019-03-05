@@ -15,11 +15,11 @@ namespace CryptoNote
   {
     std::stringstream programHeader;
     programHeader << std::endl
-      << "This is the Main net Official Release, released on 1 April 2019" <<std::endl
       << asciiArt << std::endl
       << " " << CryptoNote::CRYPTONOTE_NAME << " v" << PROJECT_VERSION_LONG << std::endl
       << " This software is distributed under the General Public License v3.0"
       << std::endl << std::endl
+      << "This is the Main net Official Release, released on 1 April 2019"
       << " " << PROJECT_COPYRIGHT
       << std::endl << std::endl
       << " Additional Copyright(s) may apply, please see the included LICENSE file for more information." << std::endl

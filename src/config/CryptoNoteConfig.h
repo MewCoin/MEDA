@@ -72,7 +72,7 @@ const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(65000000
 --print-genesis-tx --genesis-block-reward-address <premine wallet address>
 
 For example:
-./Obscured --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
+./Obscured --print-genesis-tx --genesis-block-reward-address
 
 * Take the hash printed, and replace it with the hash below in GENESIS_COINBASE_TX_HEX
 
@@ -81,7 +81,7 @@ For example:
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "012801ff000180c0ead8bee5930102ec8ed12593caa70f676f86c0e8536a95d4cb4b16b9e90df089ff0f799e7699ad210147db79274e2bde2954d7f7943b7e08cbaaaa0877c94b35337af43154e4043e96";
+const char GENESIS_COINBASE_TX_HEX[] = "012801ff000180c0ead8bee5930102d49c16ecd48f787c94de9cf322f5fdaac2c3f20fd410388c7c1a85ad2bf76d7e21014fa58d4eb3385ec369439af7ea2b04d0275582284f3ba1236598d6fa1b4be76d";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
@@ -100,8 +100,8 @@ const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 //how many 0's behind
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
 
-//equivalent to 0.01 XSD
-const uint64_t MINIMUM_FEE                                   = UINT64_C(1000000);
+//equivalent to 0.0001 XSD
+const uint64_t MINIMUM_FEE                                   = UINT64_C(10000);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
 const uint64_t MINIMUM_MIXIN_V1                              = 3;
@@ -232,9 +232,9 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  12000;
-const int      RPC_DEFAULT_PORT                              =  12001;
-const int      SERVICE_DEFAULT_PORT                          =  9070;
+const int      P2P_DEFAULT_PORT                              =  12001;
+const int      RPC_DEFAULT_PORT                              =  12002;
+const int      SERVICE_DEFAULT_PORT                          =  9071;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -272,15 +272,15 @@ const char     LATEST_VERSION_URL[]                          = "https://github.c
 const std::string LICENSE_URL                                = "https://raw.githubusercontent.com/ObscureIM/ObscureIM/obscure/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0x31, 0x22, 0x22, 0x15, 0x15, 0x12, 0x13, 0x29, 0x24, 0x12, 0x17, 0x35, 0x93, 0x48, 0x61, 0x99  }
+    {  0x21, 0x22, 0x22, 0x15, 0x25, 0x12, 0x13, 0x39, 0x24, 0x12, 0x97, 0x35, 0x93, 0x48, 0x61, 0x99  }
 };
 
 const char* const SEED_NODES[] = {
-  "209.97.174.174:12000",
-  "178.128.223.203:12000",
-  "142.93.67.56:12000",
-  "138.197.105.219:12000",
-  "40.112.59.225:12000",
-  "13.82.133.128:12000"
+  "209.97.174.174:12001",
+  "178.128.223.203:12001",
+  "142.93.67.56:12001",
+  "138.197.105.219:12001",
+  "40.112.59.225:12001",
+  "13.82.133.128:12001"
 };
 } // CryptoNote
