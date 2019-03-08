@@ -168,7 +168,7 @@ const uint32_t UPGRADE_HEIGHT_V2                             = 1;
 const uint32_t UPGRADE_HEIGHT_V3                             = 2;
 
 const uint32_t UPGRADE_HEIGHT_V4                             = 3; // Upgrade height for CN-Lite Variant 1 switch.
-const uint32_t UPGRADE_HEIGHT_V5                             = 2000000; //CNturtle-v2
+const uint32_t UPGRADE_HEIGHT_V5                             = 27000; //CNturtle-v2
 
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V5;
 
