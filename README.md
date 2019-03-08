@@ -13,3 +13,10 @@ Additonal plans:
 Obscure.sol, Decentralized Marketplace , xPay development is the pipeline.
 
 
+
+Official Links:
+
+Website : https://obscure.im
+Block Explorer: https://explore.obscure.im
+Mining pool: https://pool.obscure.im
+Fuacet: https://faucet.obscure.im
