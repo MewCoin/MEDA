@@ -28,7 +28,7 @@ const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 // prefix equivalent to XSC
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x1bfa35;
 
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 100;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4         = 6 * DIFFICULTY_TARGET;
@@ -41,20 +41,20 @@ const uint64_t MONEY_SUPPLY                                  = UINT64_C(85000000
 
 //Mine using ZAWY starts at block 0
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
-const size_t   ZAWY_DIFFICULTY_V2                            = 0;
+const size_t   ZAWY_DIFFICULTY_V2                            = 1;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
 
 //Mine using LWMA_2 start at block 1
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 1;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 2;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 3;
-const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 1200000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 2;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 3;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 4;
+const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 5;
 
-const unsigned EMISSION_SPEED_FACTOR                          = 25;
+const unsigned EMISSION_SPEED_FACTOR                          = 26;
 //block to change the speed factor at
 const unsigned CHANGE_SPEED_FACTOR                            = 30;
 //the new speed factor
-const unsigned EMISSION_SPEED_FACTOR2                         = 25;
+const unsigned EMISSION_SPEED_FACTOR2                         = 26;
 
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
