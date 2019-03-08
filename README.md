@@ -1,20 +1,15 @@
 Forked on 3rd January 2019
 
-Obsidian is a cryptocurrency that will revolutionize decentralized marketplaces.
+Obscure(XSC) is the first cryptonote that will be impelementing the ZeroCT protocol. ZeroCT protocol is an improvement on the original zero protocol, where the receiver can verify the ownership of coins from a sender without knowing his transaction history. The ZeroCT protocol was first proposed by the NavCoin team, but Obscure will be the first cryptonote coin to implement it.
 
-Features:
+This is an onchain solution where the blinding factors will be handles by the masternodes.
 
-- Proof of Stake (PoS) with a total supply of 65,000,000 coins
-- 15 second block time
-- Always on privacy based on Monero's CT-Ring
-- Decentralized market platform that uses Obsidian as a settlement layer
-- Cold staking capabilities
-- Masternodes
+Block Time: 15 Seconds
+Block Reward: 0.8XSC
+Privacy features : Compulsory Mixin, ZeroCT
 
+Additonal plans:
 
-
+Obscure.sol, Decentralized Marketplace , xPay development is the pipeline.
 
 
-Seed Nodes Are:
-3.1.10.233::Some Port
-3.0.0.149::Some Port
