@@ -50,16 +50,16 @@ const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 3;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 4;
 const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 5;
 
-const unsigned EMISSION_SPEED_FACTOR                          = 26;
+const unsigned EMISSION_SPEED_FACTOR                          = 24;
 //block to change the speed factor at
 const unsigned CHANGE_SPEED_FACTOR                            = 30;
 //the new speed factor
-const unsigned EMISSION_SPEED_FACTOR2                         = 26;
+const unsigned EMISSION_SPEED_FACTOR2                         = 24;
 
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(650000000000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(490000000000000);
 
 /* How to generate a premine:
 
