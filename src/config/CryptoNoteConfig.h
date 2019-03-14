@@ -232,9 +232,9 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  12001;
-const int      RPC_DEFAULT_PORT                              =  12002;
-const int      SERVICE_DEFAULT_PORT                          =  9071;
+const int      P2P_DEFAULT_PORT                              =  11001;
+const int      RPC_DEFAULT_PORT                              =  11002;
+const int      SERVICE_DEFAULT_PORT                          =  10071;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -272,15 +272,15 @@ const char     LATEST_VERSION_URL[]                          = "https://github.c
 const std::string LICENSE_URL                                = "https://raw.githubusercontent.com/ObscureIM/ObscureIM/obscure/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0x21, 0x22, 0x22, 0x15, 0x25, 0x12, 0x13, 0x39, 0x24, 0x12, 0x97, 0x35, 0x93, 0x48, 0x61, 0x99  }
+    {  0x22, 0x22, 0x22, 0x45, 0x25, 0x12, 0x13, 0x39, 0x99, 0x12, 0x97, 0x35, 0x93, 0x48, 0x61, 0x99  }
 };
 
 const char* const SEED_NODES[] = {
-  "209.97.174.174:12001",
-  "178.128.223.203:12001",
-  "142.93.67.56:12001",
-  "138.197.105.219:12001",
-  "40.112.59.225:12001",
-  "13.82.133.128:12001"
+  "209.97.174.174:11001",
+  "178.128.223.203:11001",
+  "142.93.67.56:11001",
+  "138.197.105.219:11001",
+  "40.112.59.225:11001",
+  "13.82.133.128:11001"
 };
 } // CryptoNote
