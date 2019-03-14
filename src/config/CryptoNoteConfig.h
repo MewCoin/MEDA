@@ -81,7 +81,7 @@ For example:
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "012801ff000180c0ead8bee5930102d49c16ecd48f787c94de9cf322f5fdaac2c3f20fd410388c7c1a85ad2bf76d7e21014fa58d4eb3385ec369439af7ea2b04d0275582284f3ba1236598d6fa1b4be76d";
+const char GENESIS_COINBASE_TX_HEX[] = "016401ff000180c0c29ff0b46f0269e3a3a8bf3c7f9d130500b2b1d8a3f84fea21362cbb259ea5d5fbfa741d1a002101bdc63ca83de0982b03ed762721b1369b8f719793a11ef4f833e64feb6164b605";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
