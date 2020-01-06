@@ -1,9 +1,9 @@
 #define STR_HELPER(x) #x
 #define STR(x) STR_HELPER(x)
 
-#define PROJECT_NAME "Obscure"
+#define PROJECT_NAME "MewCoin"
 #define PROJECT_SITE "https://obscure.im"
-#define PROJECT_COPYRIGHT "Copyright 2018, The ObscureIM Developers"
+#define PROJECT_COPYRIGHT "2020 - The MewCoin Project - Incognito at finest"
 #define APP_VER_MAJOR 2
 #define APP_VER_MINOR 2
 #define APP_VER_REV 0
