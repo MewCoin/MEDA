@@ -27,11 +27,11 @@ namespace WalletConfig
     const std::string daemonName = "MewCoind";
 
     /* The name to call this wallet */
-    const std::string walletName = "zedwallet";
+    const std::string walletName = "MeWallet";
 
     /* The name of service/walletd, the programmatic rpc interface to a
        wallet */
-    const std::string walletdName = "obscure-service";
+    const std::string walletdName = "mewcoin-service";
 
     /* The full name of your crypto */
     const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
