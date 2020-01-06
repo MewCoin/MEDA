@@ -1,4 +1,5 @@
 // Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2020, The MewCoin Project
 //
 // Please see the included LICENSE file for more information.
 
@@ -10,10 +11,10 @@
 namespace WalletConfig
 {
     /* The prefix your coins address starts with */
-    const std::string addressPrefix = "XSC";
+    const std::string addressPrefix = "MEWX";
 
     /* Your coins 'Ticker', e.g. Monero = XMR, Bitcoin = BTC */
-    const std::string ticker = "XSC";
+    const std::string ticker = "MEW";
 
     /* The filename to output the CSV to in save_csv */
     const std::string csvFilename = "transactions.csv";
@@ -23,7 +24,7 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "Obscured";
+    const std::string daemonName = "MewCoind";
 
     /* The name to call this wallet */
     const std::string walletName = "zedwallet";
@@ -62,7 +63,7 @@ namespace WalletConfig
     const uint64_t minimumFee = CryptoNote::parameters::MINIMUM_FEE;
 
     /* The minimum amount allowed to be sent - usually 1 (in ATOMIC units!) */
-    const uint64_t minimumSend = 1;
+    const uint64_t minimumSend = 0.0001;
 
     /* Is a mixin of zero disabled on your network? */
     const bool mixinZeroDisabled = true;
