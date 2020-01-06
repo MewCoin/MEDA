@@ -37,7 +37,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(6500000000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(3700000000000000);
 
 //Mine using ZAWY starts at block 0
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
@@ -59,7 +59,7 @@ const unsigned EMISSION_SPEED_FACTOR2                         = 24;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(490000000000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(111000000000000);
 
 /* How to generate a premine:
 
@@ -81,11 +81,11 @@ For example:
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "016401ff000180c0c29ff0b46f0269e3a3a8bf3c7f9d130500b2b1d8a3f84fea21362cbb259ea5d5fbfa741d1a002101bdc63ca83de0982b03ed762721b1369b8f719793a11ef4f833e64feb6164b605";
+const char GENESIS_COINBASE_TX_HEX[] = "";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
-   You can get this value by doing "print_block 2" in TurtleCoind. It is used to know what timestamp
+   You can get this value by doing "print_block 2" in MewCoind. It is used to know what timestamp
    to import from when the block height cannot be found in the node or the node is offline. */
    //time stamp set to 1 April 2019
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1554076800;
@@ -101,17 +101,17 @@ const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
 
 //equivalent to 0.0001 XSD
-const uint64_t MINIMUM_FEE                                   = UINT64_C(10000);
+const uint64_t MINIMUM_FEE                                   = UINT64_C(75000);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
-const uint64_t MINIMUM_MIXIN_V1                              = 3;
-const uint64_t MAXIMUM_MIXIN_V1                              = 3;
+const uint64_t MINIMUM_MIXIN_V1                              = 1;
+const uint64_t MAXIMUM_MIXIN_V1                              = 5;
 
-const uint64_t MINIMUM_MIXIN_V2                              = 3;
-const uint64_t MAXIMUM_MIXIN_V2                              = 3;
+const uint64_t MINIMUM_MIXIN_V2                              = 2;
+const uint64_t MAXIMUM_MIXIN_V2                              = 5;
 
 const uint64_t MINIMUM_MIXIN_V3                              = 3;
-const uint64_t MAXIMUM_MIXIN_V3                              = 3;
+const uint64_t MAXIMUM_MIXIN_V3                              = 5;
 
 /* The heights to activate the mixin limits at */
 /* Before block 250,000 mixingZero is enabled */
@@ -119,7 +119,7 @@ const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 100000;
 const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 250005;
 const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 250006;
 
-/* The mixin to use by default with zedwallet and turtle-service */
+/* The mixin to use by default with zedwallet and mewcoin-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
 const uint64_t DEFAULT_MIXIN_V0                              = 0;
 const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
@@ -169,7 +169,7 @@ const uint32_t UPGRADE_HEIGHT_V2                             = 1;
 const uint32_t UPGRADE_HEIGHT_V3                             = 2;
 
 const uint32_t UPGRADE_HEIGHT_V4                             = 3; // Upgrade height for CN-Lite Variant 1 switch.
-const uint32_t UPGRADE_HEIGHT_V5                             = 4; //CNturtle-v2
+const uint32_t UPGRADE_HEIGHT_V5                             = 4; //CNmew-v2
 
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V5;
 
@@ -214,7 +214,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "ObscureIM";
+const char     CRYPTONOTE_NAME[]                             = "MewCoin";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -242,15 +242,15 @@ const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
 
 // P2P Network Configuration Section - This defines our current P2P network version
 // and the minimum version for communication between nodes
-const uint8_t  P2P_CURRENT_VERSION                           = 4;
-const uint8_t  P2P_MINIMUM_VERSION                           = 2;
+const uint8_t  P2P_CURRENT_VERSION                           = 1;
+const uint8_t  P2P_MINIMUM_VERSION                           = 1;
 
 // This defines the minimum P2P version required for lite blocks propogation
-const uint8_t P2P_LITE_BLOCKS_PROPOGATION_VERSION            = 4;
+const uint8_t P2P_LITE_BLOCKS_PROPOGATION_VERSION            = 1;
 
 // This defines the number of versions ahead we must see peers before we start displaying
 // warning messages that we need to upgrade our software.
-const uint8_t  P2P_UPGRADE_WINDOW                            = 2;
+const uint8_t  P2P_UPGRADE_WINDOW                            = 1;
 
 const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE          = 32 * 1024 * 1024; // 32 MB
 const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT                 = 8;
@@ -277,11 +277,7 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-  "209.97.174.174:11001",
-  "178.128.223.203:11001",
-  "142.93.67.56:11001",
-  "138.197.105.219:11001",
-  "40.112.59.225:11001",
-  "13.82.133.128:11001"
+  "45.61.136.226:11777",
+  "45.61.138.110:11777",
 };
 } // CryptoNote
